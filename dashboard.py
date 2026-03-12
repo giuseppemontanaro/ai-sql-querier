@@ -29,7 +29,7 @@ user_question = st.text_input("Write your question (e.g. 'Which are the top 5 co
 
 if st.button("Analyzing"):
     if user_question:
-        with st.spinner("AI is writing SQL and queering S3..."):
+        with st.spinner("AI is writing SQL and querying S3..."):
             try:
                 response = requests.post(API_URL, json={"question": user_question})
                 
